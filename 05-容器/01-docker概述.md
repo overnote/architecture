@@ -67,10 +67,14 @@ sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/cen
 
 # 更新并安装docker-ce
 sudo yum makecache fast
-sudo yum -y install docker-ce       # docker-ce 是社区版，免费
+sudo yum install docker-ce docker-ce-cli containerd.io       # docker-ce 是社区版，免费
 
 # 检测安装
 docker version
+
+# centOS7
+sudo systemctl start docker         # 守护进程启动
+sudo systemctl enable docker        # 开机启动
 ```
 
 ## 三 docker基本配置
